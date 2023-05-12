@@ -7,6 +7,13 @@ body {
   background-color: #dfdfdf;
 }
 
+.timer {
+  font-size: 1.5rem;
+  position: absolute;
+  top: 250px;
+  left: 50px;
+}
+
 .game-over {
   position: absolute;
   font-size: 5rem;

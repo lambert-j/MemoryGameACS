@@ -14,6 +14,7 @@ function generateGrid4() {
   const gridArray4 = [1, 2, 6, 7, 5, 3, 4, 8, 4, 2, 1, 7, 3, 6, 8, 5];
   let popRandomPlus = Math.floor(Math.random() * 500 + 1);
   let difficulty = 4;
+  timerStart();
   for (let i = 0; i < 16; i++) {
     let pop = gridArray4.pop() + popRandomPlus;
     let rdmimg = "https://loremflickr.com/100/100?lock=" + pop;
@@ -59,6 +60,7 @@ function generateGrid6() {
   ];
   let popRandomPlus = Math.floor(Math.random() * 500 + 1);
   let difficulty = 6;
+  timerStart();
   for (let i = 0; i < 36; i++) {
     let pop = gridArray6.pop() + popRandomPlus;
     let rdmimg = "https://loremflickr.com/75/75?lock=" + pop;
@@ -106,6 +108,7 @@ function generateGrid8() {
   ];
   let popRandomPlus = Math.floor(Math.random() * 500 + 1);
   let difficulty = 8;
+  timerStart();
   for (let i = 0; i < 64; i++) {
     let pop = gridArray8.pop() + popRandomPlus;
     let rdmimg = "https://loremflickr.com/60/60?lock=" + pop;
@@ -207,6 +210,7 @@ function testBothId(
 
 function victoiregrid4(pointGrid) {
   if (pointGrid == 8) {
+    gameOverTimer = 1;
     setTimeout(() => {
       document.querySelector(".game-over").classList.remove("display-none");
     }, 1500);
@@ -214,6 +218,7 @@ function victoiregrid4(pointGrid) {
 }
 function victoiregrid6(pointGrid) {
   if (pointGrid == 18) {
+    gameOverTimer = 1;
     setTimeout(() => {
       document.querySelector(".game-over").classList.remove("display-none");
     }, 1500);
@@ -221,8 +226,31 @@ function victoiregrid6(pointGrid) {
 }
 function victoiregrid8(pointGrid) {
   if (pointGrid == 32) {
+    gameOverTimer = 1;
     setTimeout(() => {
       document.querySelector(".game-over").classList.remove("display-none");
     }, 1500);
+  }
+}
+
+let gameOverTimer = 0;
+function timerStart() {
+  let timesec = 0;
+  let timemin = 0;
+  let timeInterval = setInterval(myTimer, 1000);
+  function myTimer() {
+    if (gameOverTimer == 1) {
+      clearInterval(timeInterval);
+    } else {
+      if (timesec == 60) {
+        timemin = timemin + 1;
+        timesec = 0;
+      } else {
+        timesec = timesec + 1;
+      }
+      document.querySelector(
+        ".timer"
+      ).innerHTML = `Temps écoulé: ${timemin} min ${timesec} sec`;
+    }
   }
 }

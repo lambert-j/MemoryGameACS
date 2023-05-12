@@ -3,8 +3,39 @@ body {
   padding: 0;
   width: 100vw;
   height: 100vh;
+  font-family: quantico;
+  background-color: #dfdfdf;
 }
 
+.game-over {
+  position: absolute;
+  font-size: 5rem;
+  text-decoration: underline;
+  font-weight: bold;
+  transform: translate(calc((100vw - 392px) / 2), calc((100vh - 114px) / 2));
+  z-index: 5;
+}
+
+.score-box {
+  font-size: 3rem;
+  position: absolute;
+  top: 50px;
+  left: 450px;
+}
+
+.reset {
+  position: absolute;
+  top: 50px;
+  left: 50px;
+  padding: 5px;
+  font-size: 1.5rem;
+  border: 2px solid darkblue;
+  background-color: rgb(210, 210, 210);
+}
+.reset:hover {
+  box-shadow: 1px 1px 10px rgba(0, 0, 0, 0.5);
+  cursor: pointer;
+}
 .display-none {
   display: none !important;
   pointer-events: none;
@@ -102,10 +133,27 @@ body {
 }
 
 /* The flip card container - set the width and height to whatever you want. We have added the border property to demonstrate that the flip itself goes out of the box on hover (remove perspective if you don't want the 3D effect */
-.flip-card {
+
+.flip-card1 {
+  background-color: transparent;
+  width: 100px;
+  height: 100px;
+  border: 1px solid #f1f1f1;
+  perspective: 1000px; /* Remove this if you don't want the 3D effect */
+}
+
+.flip-card2 {
   background-color: transparent;
   width: 75px;
   height: 75px;
+  border: 1px solid #f1f1f1;
+  perspective: 1000px; /* Remove this if you don't want the 3D effect */
+}
+
+.flip-card3 {
+  background-color: transparent;
+  width: 60px;
+  height: 60px;
   border: 1px solid #f1f1f1;
   perspective: 1000px; /* Remove this if you don't want the 3D effect */
 }
@@ -137,67 +185,16 @@ body {
 
 /* Style the front side (fallback if image is missing) */
 .flip-card-front {
-  background-color: #9b3939c4;
+  background-color: #3e1094e3;
   color: black;
 }
 
 /* Style the back side */
 .flip-card-back {
-  background-color: dodgerblue;
+  background-color: rgb(210, 210, 210);
   color: white;
   transform: rotateY(180deg);
 }
 
-/* .bloc {
-  width: 100px;
-  height: 100px;
-
-  position: relative;
+@media (max-width: 500px) {
 }
-
-.bloc2 {
-  position: absolute;
-  width: 100px;
-  height: 100px;
-  animation: scale-up-img 1s forwards 1;
-  background-color: blue;
-  animation-timing-function: linear;
-}
-.bloc3 {
-  position: absolute;
-  width: 100px;
-  height: 100px;
-  animation: scale-down-img 1s forwards 1;
-  background-color: rebeccapurple;
-  animation-timing-function: linear;
-}
-
-@keyframes scale-up-img {
-  0% {
-    -webkit-transform: scaleX(0);
-    transform: scaleX(0);
-    -webkit-transform-origin: 100% 100%;
-    transform-origin: 100% 100%;
-  }
-  100% {
-    -webkit-transform: scaleX(1);
-    transform: scaleX(1);
-    -webkit-transform-origin: 100% 100%;
-    transform-origin: 100% 100%;
-  }
-}
-
-@keyframes scale-down-img {
-  0% {
-    -webkit-transform: scaleX(1);
-    transform: scaleX(1);
-    -webkit-transform-origin: 0% 0%;
-    transform-origin: 0% 0%;
-  }
-  100% {
-    -webkit-transform: scaleX(0);
-    transform: scaleX(0);
-    -webkit-transform-origin: 0% 0%;
-    transform-origin: 0% 0%;
-  }
-} */

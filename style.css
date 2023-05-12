@@ -250,19 +250,19 @@ body {
     width: 350px;
     height: 350px;
     gap: 10px;
-    transform: translate(calc((100vw - 350px) / 2), calc((100vh - 450px) / 2));
+    transform: translate(calc((100vw - 350px) / 2), calc((100vh - 350px) / 2));
   }
   .grid-box-6 {
     width: 350px;
     height: 350px;
     gap: 10px;
-    transform: translate(calc((100vw - 350px) / 2), calc((100vh - 450px) / 2));
+    transform: translate(calc((100vw - 350px) / 2), calc((100vh - 350px) / 2));
   }
   .grid-box-8 {
     width: 350px;
     height: 350px;
     gap: 10px;
-    transform: translate(calc((100vw - 350px) / 2), calc((100vh - 450px) / 2));
+    transform: translate(calc((100vw - 350px) / 2), calc((100vh - 350px) / 2));
   }
   .game-over {
     font-size: 4rem;

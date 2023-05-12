@@ -202,9 +202,6 @@ body {
 }
 
 /* Do an horizontal flip when you move the mouse over the flip box container */
-.flip-card:hover .flip-card-inner {
-  /* transform: rotateY(180deg); */
-}
 
 /* Position the front and back side */
 .flip-card-front,
@@ -266,5 +263,9 @@ body {
     height: 350px;
     gap: 10px;
     transform: translate(calc((100vw - 350px) / 2), calc((100vh - 450px) / 2));
+  }
+  .game-over {
+    font-size: 4rem;
+    transform: translate(calc((100vw - 323px) / 2), calc((100vh - 91px) / 2));
   }
 }
